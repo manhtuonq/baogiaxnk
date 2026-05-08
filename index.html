@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo Giá XNK</title>
+
+<!-- Meta Title -->
+<meta name="title" content="Báo Giá XNK">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alphafreelance.vn/bao-gia-xnk">
+<meta property="og:title" content="Báo Giá XNK">
+<meta property="og:description" content="Báo giá phần mềm ERP doanh nghiệp xuất nhập khẩu – Alpha Freelance. 13 phân hệ, triển khai 16 tuần, bảo hành 12 tháng.">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://alphafreelance.vn/bao-gia-xnk">
+<meta name="twitter:title" content="Báo Giá XNK">
+<meta name="twitter:description" content="Báo giá phần mềm ERP doanh nghiệp xuất nhập khẩu – Alpha Freelance.">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://alphafreelance.vn/bao-gia-xnk">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&subset=vietnamese&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap&subset=vietnamese');
+
+  :root { --font-main: 'Be Vietnam Pro', 'Segoe UI', 'Arial Unicode MS', 'Tahoma', sans-serif; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-main);
+    background: #f0f2f5;
+    color: #1a1a2e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+  }
+
+  .print-bar {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: #0f2460; color: white;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 24px; z-index: 999; box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .print-bar span { font-size: 13px; font-family: var(--font-main); color: rgba(255,255,255,0.8); }
+  .btn-pdf {
+    background: #fbbf24; color: #1a1a2e;
+    border: none; border-radius: 8px; padding: 8px 20px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+    font-family: var(--font-main);
+    display: flex; align-items: center; gap: 6px;
+    transition: background 0.2s;
+  }
+  .btn-pdf:hover { background: #f59e0b; }
+
+  .wrapper { max-width: 960px; margin: 64px auto 40px; background: white; box-shadow: 0 4px 32px rgba(0,0,0,0.12); border-radius: 4px; overflow: hidden; }
+
+  .header {
+    background: linear-gradient(135deg, #0f2460 0%, #1a3a8f 60%, #2563c7 100%);
+    color: white; padding: 36px 40px 28px; position: relative; overflow: hidden;
+  }
+  .header::before { content:''; position:absolute; top:-40px; right:-40px; width:200px; height:200px; background:rgba(255,255,255,0.05); border-radius:50%; }
+  .header::after { content:''; position:absolute; bottom:-60px; right:80px; width:140px; height:140px; background:rgba(255,255,255,0.04); border-radius:50%; }
+  .header-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px; }
+  .brand-logo { display:flex; align-items:center; gap:14px; }
+  .logo-box { width:54px; height:54px; background:rgba(255,255,255,0.15); border-radius:12px; display:flex; align-items:center; justify-content:center; border:1.5px solid rgba(255,255,255,0.3); }
+  .logo-box span { font-size:22px; font-weight:700; color:white; letter-spacing:-1px; font-family: var(--font-main); }
+  .brand-name h1 { font-size:22px; font-weight:700; letter-spacing:0.5px; font-family: var(--font-main); }
+  .brand-name p { font-size:12px; color:rgba(255,255,255,0.7); margin-top:2px; font-family: var(--font-main); }
+  .doc-badge { background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); border-radius:8px; padding:8px 18px; text-align:right; }
+  .doc-badge .label { font-size:10px; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:1px; font-family: var(--font-main); }
+  .doc-badge .value { font-size:15px; font-weight:600; color:white; font-family: var(--font-main); }
+  .contact-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px; }
+  .contact-item { display:flex; align-items:center; gap:8px; }
+  .contact-item span { font-size:12px; color:rgba(255,255,255,0.85); font-family: var(--font-main); }
+
+  .intro-section { background:#f0f4ff; border-left:4px solid #2563c7; padding:20px 40px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .intro-block h3 { font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#6b7280; margin-bottom:6px; font-family: var(--font-main); }
+  .intro-block p { font-size:13px; color:#1a1a2e; font-weight:500; font-family: var(--font-main); }
+  .intro-block p.small { font-size:12px; color:#4b5563; font-weight:400; margin-top:2px; font-family: var(--font-main); }
+
+  .section { padding:28px 40px; }
+  .section-title { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .section-title i { font-size:20px; color:#2563c7; }
+  .section-title h2 { font-size:16px; font-weight:600; color:#0f2460; font-family: var(--font-main); }
+  .section-title .tag { background:#dbeafe; color:#1d4ed8; font-size:11px; padding:3px 10px; border-radius:20px; font-weight:500; margin-left:auto; font-family: var(--font-main); }
+
+  .module-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .module-card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px; }
+  .module-card .mc-head { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+  .module-card .mc-icon { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; }
+  .mc-icon.blue { background:#dbeafe; } .mc-icon.blue i { color:#1d4ed8; }
+  .mc-icon.green { background:#dcfce7; } .mc-icon.green i { color:#16a34a; }
+  .mc-icon.amber { background:#fef3c7; } .mc-icon.amber i { color:#d97706; }
+  .mc-icon.purple { background:#ede9fe; } .mc-icon.purple i { color:#7c3aed; }
+  .mc-icon.teal { background:#ccfbf1; } .mc-icon.teal i { color:#0d9488; }
+  .mc-icon.coral { background:#fee2e2; } .mc-icon.coral i { color:#dc2626; }
+  .mc-icon.navy { background:#e0e7ff; } .mc-icon.navy i { color:#4338ca; }
+  .mc-icon.rose { background:#fce7f3; } .mc-icon.rose i { color:#db2777; }
+  .mc-icon.slate { background:#f1f5f9; } .mc-icon.slate i { color:#475569; }
+  .module-card .mc-head h4 { font-size:13px; font-weight:600; color:#1a1a2e; font-family: var(--font-main); }
+  .module-card ul { list-style:none; }
+  .module-card ul li { font-size:11px; color:#6b7280; padding:2px 0; display:flex; align-items:center; gap:5px; font-family: var(--font-main); }
+  .module-card ul li::before { content:''; width:4px; height:4px; background:#93c5fd; border-radius:50%; flex-shrink:0; }
+
+  .pricing-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .pricing-table thead tr { background:#0f2460; color:white; }
+  .pricing-table thead th { padding:12px 14px; text-align:left; font-weight:500; font-size:12px; font-family: var(--font-main); }
+  .pricing-table thead th:last-child { text-align:right; }
+  .pricing-table tbody tr { border-bottom:1px solid #f1f5f9; }
+  .pricing-table tbody tr:nth-child(even) { background:#f8faff; }
+  .pricing-table tbody td { padding:10px 14px; color:#374151; vertical-align:top; font-family: var(--font-main); }
+  .pricing-table tbody td:last-child { text-align:right; font-weight:600; color:#0f2460; white-space:nowrap; }
+  .pricing-table tbody td .desc { font-size:11px; color:#9ca3af; margin-top:2px; font-family: var(--font-main); }
+  .pricing-table .cat-row td { background:#e8eeff; color:#1e3a8a; font-weight:600; font-size:12px; padding:7px 14px; font-family: var(--font-main); }
+  .pricing-table tfoot tr { background:#0f2460; }
+  .pricing-table tfoot td { padding:14px; color:white; font-weight:700; font-size:15px; font-family: var(--font-main); }
+  .pricing-table tfoot td:last-child { text-align:right; color:#fbbf24; font-size:17px; }
+  .badge-incl { display:inline-block; background:#dcfce7; color:#166534; font-size:10px; padding:2px 7px; border-radius:10px; font-weight:500; margin-left:6px; font-family: var(--font-main); }
+
+  .timeline { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:4px; }
+  .tl-item { text-align:center; position:relative; }
+  .tl-item::after { content:''; position:absolute; top:20px; right:0; width:50%; height:2px; background:#dbeafe; z-index:0; }
+  .tl-item:last-child::after { display:none; }
+  .tl-item::before { content:''; position:absolute; top:20px; left:0; width:50%; height:2px; background:#dbeafe; z-index:0; }
+  .tl-item:first-child::before { display:none; }
+  .tl-dot { width:40px; height:40px; background:#2563c7; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 8px; position:relative; z-index:1; }
+  .tl-dot i { font-size:18px; color:white; }
+  .tl-dot.phase2 { background:#7c3aed; }
+  .tl-dot.phase3 { background:#059669; }
+  .tl-dot.phase4 { background:#d97706; }
+  .tl-label { font-size:11px; font-weight:600; color:#1a1a2e; font-family: var(--font-main); }
+  .tl-sub { font-size:10px; color:#6b7280; margin-top:2px; font-family: var(--font-main); }
+  .tl-week { display:inline-block; background:#f0f4ff; border:1px solid #c7d2fe; border-radius:10px; padding:2px 8px; font-size:10px; color:#4338ca; margin-top:4px; font-weight:500; font-family: var(--font-main); }
+
+  .tech-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .tech-card { background:#f8faff; border:1px solid #e2e8f0; border-radius:8px; padding:12px; text-align:center; }
+  .tech-card i { font-size:22px; color:#2563c7; display:block; margin-bottom:4px; }
+  .tech-card .tc-label { font-size:10px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; font-family: var(--font-main); }
+  .tech-card .tc-val { font-size:12px; font-weight:600; color:#1a1a2e; margin-top:2px; font-family: var(--font-main); }
+
+  .terms-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .term-item { background:#f8faff; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px; display:flex; align-items:flex-start; gap:10px; }
+  .term-item i { font-size:16px; color:#2563c7; margin-top:1px; flex-shrink:0; }
+  .term-item .t-title { font-size:12px; font-weight:600; color:#1a1a2e; font-family: var(--font-main); }
+  .term-item .t-desc { font-size:11px; color:#6b7280; margin-top:2px; line-height:1.5; font-family: var(--font-main); }
+
+  .total-box { background:linear-gradient(135deg,#0f2460 0%,#1a3a8f 100%); border-radius:12px; padding:24px 32px; display:flex; justify-content:space-between; align-items:center; margin:0 40px; }
+  .total-box .tb-left h3 { font-size:13px; color:rgba(255,255,255,0.7); font-weight:400; font-family: var(--font-main); }
+  .total-box .tb-left p { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; font-family: var(--font-main); }
+  .total-box .tb-right .amount { font-size:32px; font-weight:700; color:#fbbf24; letter-spacing:-1px; font-family: var(--font-main); }
+  .total-box .tb-right .currency { font-size:14px; color:rgba(255,255,255,0.6); font-family: var(--font-main); }
+
+  .footer { background:#1a1a2e; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; margin-top:32px; }
+  .footer-left p { font-size:11px; color:rgba(255,255,255,0.5); font-family: var(--font-main); }
+  .footer-right { display:flex; gap:24px; }
+  .footer-contact .fc-name { font-size:12px; font-weight:600; color:#93c5fd; font-family: var(--font-main); }
+  .footer-contact .fc-role { font-size:10px; color:rgba(255,255,255,0.5); font-family: var(--font-main); }
+  .footer-contact .fc-phone { font-size:12px; color:rgba(255,255,255,0.8); margin-top:2px; font-family: var(--font-main); }
+  .divider { height:1px; background:#e2e8f0; margin:0 40px; }
+
+  @media print {
+    body { background: white; }
+    .print-bar { display: none !important; }
+    .wrapper { max-width:100%; box-shadow:none; border-radius:0; margin:0; }
+    .header, .total-box, .footer, .pricing-table thead tr, .pricing-table tfoot tr, .pricing-table .cat-row td {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>📄 Báo Giá ERP – Alpha Freelance | BG-ERP-2025-001</span>
+  <button class="btn-pdf" onclick="window.print()">
+    <i class="ti ti-file-type-pdf"></i> Xuất PDF / In
+  </button>
+</div>
+
+<div class="wrapper">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="brand-logo">
+        <div class="logo-box"><span>AF</span></div>
+        <div class="brand-name">
+          <h1>ALPHA FREELANCE</h1>
+          <p>Giải pháp phần mềm doanh nghiệp</p>
+        </div>
+      </div>
+      <div class="doc-badge">
+        <div class="label">Báo giá số</div>
+        <div class="value">BG-ERP-2025-001</div>
+        <div class="label" style="margin-top:6px">Ngày phát hành</div>
+        <div class="value" style="font-size:13px">Tháng 5, 2025</div>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-item"><i class="ti ti-map-pin" style="color:rgba(255,255,255,0.6)"></i><span>26/17 Nguyễn Văn Lượng, Gò Vấp, TP. HCM</span></div>
+      <div class="contact-item"><i class="ti ti-phone" style="color:rgba(255,255,255,0.6)"></i><span>0987 826 569 – Phan Trọng Phúc</span></div>
+      <div class="contact-item"><i class="ti ti-brand-github" style="color:rgba(255,255,255,0.6)"></i><span>Thiết kế &amp; triển khai phần mềm ERP</span></div>
+    </div>
+  </div>
+
+  <div class="intro-section">
+    <div class="intro-block">
+      <h3>Dự án</h3>
+      <p>Phần Mềm ERP Doanh Nghiệp Xuất Nhập Khẩu</p>
+      <p class="small">Quy mô 30–50 nhân sự · Toàn bộ phân hệ liên kết</p>
+    </div>
+    <div class="intro-block">
+      <h3>Khách hàng</h3>
+      <p>Công ty xuất nhập khẩu – Nội địa &amp; Quốc tế</p>
+      <p class="small">Đa chi nhánh · Đa tiền tệ · Xuất khẩu quốc tế</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <i class="ti ti-apps"></i>
+      <h2>Tổng quan các phân hệ chức năng</h2>
+      <span class="tag">13 Module chính</span>
+    </div>
+    <div class="module-grid">
+      <div class="module-card"><div class="mc-head"><div class="mc-icon blue"><i class="ti ti-users"></i></div><h4>Nhân sự &amp; Phân quyền</h4></div><ul><li>Quản lý tài khoản, vai trò, phòng ban</li><li>Phân quyền chi tiết từng chức năng</li><li>Audit log toàn bộ thao tác</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon teal"><i class="ti ti-address-book"></i></div><h4>CRM Khách hàng</h4></div><ul><li>Hồ sơ khách, người liên hệ</li><li>Lịch sử chăm sóc, follow-up</li><li>File hợp đồng, chứng từ</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon amber"><i class="ti ti-truck-delivery"></i></div><h4>Nhà cung cấp</h4></div><ul><li>Nông dân, nhà máy, đại lý</li><li>Sản phẩm theo NCC</li><li>Công nợ NCC</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon green"><i class="ti ti-package"></i></div><h4>Quản lý sản phẩm</h4></div><ul><li>Danh mục, SKU, barcode</li><li>Biến thể size, đóng gói, kg</li><li>Lịch sử giá, tồn kho realtime</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon slate"><i class="ti ti-building-warehouse"></i></div><h4>Kho hàng</h4></div><ul><li>Nhập/xuất/chuyển/kiểm kho</li><li>Tồn kho theo kho, theo lô</li><li>Phiếu nhập xuất tự động</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon blue"><i class="ti ti-shopping-cart"></i></div><h4>Mua hàng (PO)</h4></div><ul><li>Lập PO, phê duyệt, nhập hàng</li><li>Phiếu nhập kho tự động</li><li>Công nợ &amp; thanh toán NCC</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon coral"><i class="ti ti-receipt"></i></div><h4>Bán hàng (SO)</h4></div><ul><li>Báo giá, hợp đồng, đơn hàng</li><li>Hóa đơn, công nợ KH</li><li>Nội địa &amp; xuất khẩu FOB/CIF</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon navy"><i class="ti ti-ship"></i></div><h4>Xuất khẩu</h4></div><ul><li>Lô hàng, container, tàu</li><li>CO, CQ, Bill of Lading</li><li>Khai báo hải quan</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon purple"><i class="ti ti-calculator"></i></div><h4>Kế toán</h4></div><ul><li>Hệ thống tài khoản (111–511)</li><li>Bút toán tự động theo đơn</li><li>Phiếu chi, loại chi phí</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon teal"><i class="ti ti-cash"></i></div><h4>Tài chính</h4></div><ul><li>Dòng tiền, ngân hàng</li><li>Biến động tài khoản</li><li>Đa tiền tệ USD/VND</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon amber"><i class="ti ti-tools"></i></div><h4>Sản xuất / Đóng gói</h4></div><ul><li>Lệnh sản xuất, nguyên liệu</li><li>Thành phẩm xuất kho</li><li>Liên kết lô hàng</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon rose"><i class="ti ti-map-route"></i></div><h4>Logistics &amp; Vận chuyển</h4></div><ul><li>Tracking trạng thái giao hàng</li><li>Chi phí vận chuyển</li><li>Đơn vị vận chuyển</li></ul></div>
+      <div class="module-card"><div class="mc-head"><div class="mc-icon blue"><i class="ti ti-chart-bar"></i></div><h4>Dashboard &amp; Báo cáo</h4></div><ul><li>Doanh thu, lợi nhuận, công nợ</li><li>KPI sale, hiệu suất nhân viên</li><li>Tồn kho, dòng tiền, logistics</li></ul></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-title">
+      <i class="ti ti-list-details"></i>
+      <h2>Bảng chi tiết báo giá</h2>
+      <span class="tag">Chi tiết theo từng hạng mục</span>
+    </div>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th style="width:40px">#</th>
+          <th>Hạng mục / Chức năng</th>
+          <th style="width:80px">Đơn vị</th>
+          <th style="width:50px">SL</th>
+          <th style="width:130px;text-align:right">Thành tiền (VND)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-users" style="margin-right:6px"></i>A. PHÂN HỆ NHÂN SỰ &amp; PHÂN QUYỀN</td></tr>
+        <tr><td>1</td><td>Quản lý users, tài khoản nhân viên<div class="desc">Đăng nhập, đổi mật khẩu, avatar, trạng thái</div></td><td>Module</td><td>1</td><td>3.000.000</td></tr>
+        <tr><td>2</td><td>Phòng ban, vai trò, phân quyền chi tiết<div class="desc">Role-permission mapping, quyền xem/sửa/duyệt/xóa</div></td><td>Module</td><td>1</td><td>4.000.000</td></tr>
+        <tr><td>3</td><td>Audit log – ghi nhật ký toàn bộ thao tác<div class="desc">Theo dõi ai, làm gì, lúc nào; old_data vs new_data</div></td><td>Module</td><td>1</td><td>2.500.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-address-book" style="margin-right:6px"></i>B. CRM KHÁCH HÀNG &amp; NHÀ CUNG CẤP</td></tr>
+        <tr><td>4</td><td>Hồ sơ khách hàng, người liên hệ, lịch sử CSKH<div class="desc">customer_code, loại KH, sale phụ trách, ghi chú follow-up</div></td><td>Module</td><td>1</td><td>5.000.000</td></tr>
+        <tr><td>5</td><td>Quản lý nhà cung cấp (nông dân, nhà máy, đại lý)<div class="desc">supplier_code, loại NCC, sản phẩm cung cấp</div></td><td>Module</td><td>1</td><td>3.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-package" style="margin-right:6px"></i>C. SẢN PHẨM &amp; KHO HÀNG</td></tr>
+        <tr><td>6</td><td>Danh mục sản phẩm, SKU, barcode, biến thể<div class="desc">Kích cỡ, đóng gói, trọng lượng, lịch sử giá</div></td><td>Module</td><td>1</td><td>5.500.000</td></tr>
+        <tr><td>7</td><td>Quản lý kho – nhập/xuất/chuyển/kiểm kê<div class="desc">Tồn kho realtime, stock_transfer, điều chỉnh lệch kho</div></td><td>Module</td><td>1</td><td>7.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-shopping-cart" style="margin-right:6px"></i>D. MUA HÀNG &amp; BÁN HÀNG</td></tr>
+        <tr><td>8</td><td>Purchase Order – lập PO, duyệt, nhập hàng<div class="desc">PO code tự động, phiếu nhập kho, thanh toán NCC, công nợ</div></td><td>Module</td><td>1</td><td>7.500.000</td></tr>
+        <tr><td>9</td><td>Sales Order – báo giá, hợp đồng, đơn bán, hóa đơn<div class="desc">SO code, nội địa/xuất khẩu/FOB/CIF, thanh toán KH, công nợ</div></td><td>Module</td><td>1</td><td>9.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-ship" style="margin-right:6px"></i>E. XUẤT KHẨU &amp; LOGISTICS</td></tr>
+        <tr><td>10</td><td>Quản lý lô xuất khẩu, container, tàu<div class="desc">ETD/ETA, cảng đi/đến, incoterm, chi phí quốc tế</div></td><td>Module</td><td>1</td><td>8.000.000</td></tr>
+        <tr><td>11</td><td>Chứng từ xuất khẩu (CO, CQ, Invoice, Packing List, B/L)<div class="desc">Quản lý file, khai báo hải quan</div></td><td>Module</td><td>1</td><td>5.000.000</td></tr>
+        <tr><td>12</td><td>Logistics nội địa – delivery, tracking, chi phí vận chuyển<div class="desc">Tracking trạng thái giao hàng realtime</div></td><td>Module</td><td>1</td><td>4.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-calculator" style="margin-right:6px"></i>F. KẾ TOÁN &amp; TÀI CHÍNH</td></tr>
+        <tr><td>13</td><td>Hệ thống tài khoản kế toán (111, 112, 131, 331, 511...)<div class="desc">Bút toán tổng, chi tiết hạch toán debit/credit</div></td><td>Module</td><td>1</td><td>8.000.000</td></tr>
+        <tr><td>14</td><td>Tự động sinh bút toán theo đơn hàng<div class="desc">Bán hàng: Nợ 131 Có 511 · Thu tiền: Nợ 111 Có 131</div></td><td>Module</td><td>1</td><td>5.500.000</td></tr>
+        <tr><td>15</td><td>Phiếu chi, loại chi phí (vận chuyển, lương, điện nước...)<div class="desc">Dòng tiền, tài khoản ngân hàng, biến động số dư</div></td><td>Module</td><td>1</td><td>5.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-tools" style="margin-right:6px"></i>G. SẢN XUẤT, TASK &amp; HỆ THỐNG</td></tr>
+        <tr><td>16</td><td>Sản xuất / đóng gói – lệnh SX, nguyên liệu, thành phẩm<div class="desc">Liên kết kho và lô hàng xuất khẩu</div></td><td>Module</td><td>1</td><td>5.000.000</td></tr>
+        <tr><td>17</td><td>Task, workflow, duyệt quy trình (PO, chi tiền, xuất kho)<div class="desc">Trao đổi nội bộ, phê duyệt đa cấp</div></td><td>Module</td><td>1</td><td>4.000.000</td></tr>
+        <tr><td>18</td><td>Quản lý file &amp; chứng từ toàn hệ thống<div class="desc">PDF, Excel, hợp đồng, hóa đơn, bill</div></td><td>Tính năng</td><td>1</td><td>2.000.000</td></tr>
+        <tr><td>19</td><td>Thông báo realtime (công nợ quá hạn, tồn kho thấp...)<div class="desc">Notification system, push alert</div></td><td>Tính năng</td><td>1</td><td>2.000.000</td></tr>
+        <tr class="cat-row"><td colspan="5"><i class="ti ti-chart-bar" style="margin-right:6px"></i>H. DASHBOARD &amp; BÁO CÁO</td></tr>
+        <tr><td>20</td><td>Dashboard tổng quan – doanh thu, lợi nhuận, công nợ, dòng tiền<div class="desc">KPI sale, tồn kho, chi phí logistics, hiệu suất nhân viên</div></td><td>Module</td><td>1</td><td>7.000.000</td></tr>
+        <tr><td>21</td><td>Mã tự động: SO, PO, INV, PO code <span class="badge-incl">Bao gồm</span><div class="desc">Soft delete, đa chi nhánh, đa tiền tệ USD/VND</div></td><td>Hệ thống</td><td>1</td><td>3.000.000</td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="color:rgba(255,255,255,0.85);font-size:13px;">
+            <i class="ti ti-check" style="margin-right:8px"></i>
+            Tổng cộng (đã bao gồm thiết kế UI/UX, triển khai, đào tạo)
+          </td>
+          <td style="font-size:18px;color:#fbbf24;font-weight:700;">105.000.000 ₫</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-title">
+      <i class="ti ti-calendar-time"></i>
+      <h2>Tiến độ triển khai dự kiến</h2>
+      <span class="tag">~16 tuần</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"><i class="ti ti-layout-grid"></i></div>
+        <div class="tl-label">Giai đoạn 1</div>
+        <div class="tl-sub">Auth · Sản phẩm · Kho · NCC</div>
+        <div class="tl-week">Tuần 1–4</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot phase2"><i class="ti ti-shopping-cart"></i></div>
+        <div class="tl-label">Giai đoạn 2</div>
+        <div class="tl-sub">Mua hàng · Bán hàng · CRM</div>
+        <div class="tl-week">Tuần 5–8</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot phase3"><i class="ti ti-ship"></i></div>
+        <div class="tl-label">Giai đoạn 3</div>
+        <div class="tl-sub">Kế toán · Xuất khẩu · Logistics</div>
+        <div class="tl-week">Tuần 9–13</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot phase4"><i class="ti ti-chart-bar"></i></div>
+        <div class="tl-label">Giai đoạn 4</div>
+        <div class="tl-sub">Dashboard · Test · Đào tạo</div>
+        <div class="tl-week">Tuần 14–16</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-title">
+      <i class="ti ti-cpu"></i>
+      <h2>Công nghệ sử dụng</h2>
+    </div>
+    <div class="tech-row">
+      <div class="tech-card"><i class="ti ti-server"></i><div class="tc-label">Backend</div><div class="tc-val">Laravel / NestJS</div></div>
+      <div class="tech-card"><i class="ti ti-brand-react"></i><div class="tc-label">Frontend</div><div class="tc-val">Next.js / React</div></div>
+      <div class="tech-card"><i class="ti ti-database"></i><div class="tc-label">Database</div><div class="tc-val">PostgreSQL</div></div>
+      <div class="tech-card"><i class="ti ti-cloud"></i><div class="tc-label">Kiến trúc</div><div class="tc-val">API-first · Queue</div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-title">
+      <i class="ti ti-file-certificate"></i>
+      <h2>Điều khoản &amp; cam kết</h2>
+    </div>
+    <div class="terms-grid">
+      <div class="term-item"><i class="ti ti-cash"></i><div><div class="t-title">Thanh toán theo giai đoạn</div><div class="t-desc">30% ký hợp đồng · 40% hoàn thành GĐ 2 · 30% nghiệm thu bàn giao</div></div></div>
+      <div class="term-item"><i class="ti ti-shield-check"></i><div><div class="t-title">Bảo hành 12 tháng</div><div class="t-desc">Sửa lỗi miễn phí, hỗ trợ kỹ thuật từ xa trong 12 tháng sau bàn giao</div></div></div>
+      <div class="term-item"><i class="ti ti-device-desktop"></i><div><div class="t-title">Đào tạo sử dụng</div><div class="t-desc">Đào tạo trực tiếp toàn bộ nhân viên, tài liệu hướng dẫn chi tiết</div></div></div>
+      <div class="term-item"><i class="ti ti-git-branch"></i><div><div class="t-title">Mã nguồn &amp; dữ liệu</div><div class="t-desc">Bàn giao toàn bộ mã nguồn và dữ liệu sau khi thanh toán đầy đủ</div></div></div>
+    </div>
+  </div>
+
+  <div class="total-box">
+    <div class="tb-left">
+      <h3>Tổng giá trị hợp đồng phần mềm ERP</h3>
+      <p>Bao gồm thiết kế, lập trình, triển khai, đào tạo &amp; bảo hành 12 tháng</p>
+    </div>
+    <div class="tb-right">
+      <div class="currency">VND</div>
+      <div class="amount">105.000.000 ₫</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <p>ALPHA FREELANCE · 26/17 Nguyễn Văn Lượng, Gò Vấp, TP. HCM</p>
+      <p style="margin-top:4px">Báo giá có hiệu lực trong vòng 30 ngày kể từ ngày phát hành</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-contact">
+        <div class="fc-name">Phan Trọng Phúc</div>
+        <div class="fc-role">Người phụ trách dự án</div>
+        <div class="fc-phone">0987 826 569</div>
+      </div>
+      <div class="footer-contact" style="text-align:right">
+        <div class="fc-name">Tường</div>
+        <div class="fc-role">Hỗ trợ kỹ thuật</div>
+        <div class="fc-phone">0703 098 480</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.fonts.ready.then(() => {
+    document.body.style.visibility = 'visible';
+  });
+  document.body.style.visibility = 'hidden';
+</script>
+
+</body>
+</html>
