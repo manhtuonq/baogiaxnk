@@ -112,6 +112,7 @@
   .module-card ul li::before { content:''; width:4px; height:4px; background:#93c5fd; border-radius:50%; flex-shrink:0; }
 
   .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .table-hint { display:none; font-size:11px; color:#6b7280; margin:0 0 10px; font-family: var(--font-main); }
   .pricing-table { width:100%; border-collapse:collapse; font-size:13px; min-width:700px; }
   .pricing-table thead tr { background:#0f2460; color:white; }
   .pricing-table thead th { padding:12px 14px; text-align:left; font-weight:500; font-size:12px; font-family: var(--font-main); }
@@ -205,6 +206,8 @@
 
     .footer { flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 24px; }
     .footer-right { width: 100%; justify-content: space-between; gap: 10px; }
+
+    .table-hint { display:block; }
   }
 
   @media (max-width: 560px) {
@@ -221,12 +224,61 @@
     .module-card { padding: 12px; }
     .module-card .mc-head h4 { font-size: 12px; }
 
-    .table-wrap { margin: 0 -14px; padding: 0 14px 2px; }
-    .pricing-table { font-size: 12px; min-width: 620px; }
-    .pricing-table thead th,
-    .pricing-table tbody td,
-    .pricing-table .cat-row td,
-    .pricing-table tfoot td { padding-left: 8px; padding-right: 8px; }
+    .table-hint { display:none; }
+    .table-wrap { margin: 0; padding: 0; overflow-x: visible; }
+    .pricing-table { min-width: 100%; border-collapse: separate; border-spacing: 0; }
+    .pricing-table thead { display:none; }
+    .pricing-table tbody { display:block; }
+    .pricing-table tbody tr { display:block; border-bottom:none; background:transparent !important; margin-bottom:10px; }
+    .pricing-table tbody tr:not(.cat-row) {
+      border:1px solid #e2e8f0;
+      border-radius:10px;
+      padding:10px 10px 8px;
+      background:#ffffff !important;
+      box-shadow:0 1px 4px rgba(15,36,96,0.06);
+    }
+    .pricing-table tbody td { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; padding:6px 0; font-size:12px; border-bottom:1px dashed #eef2ff; }
+    .pricing-table tbody tr:not(.cat-row) td:last-child { border-bottom:none; }
+    .pricing-table tbody tr:not(.cat-row) td::before {
+      flex:0 0 88px;
+      content:'';
+      color:#64748b;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:0.3px;
+      font-weight:600;
+      line-height:1.5;
+    }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(1)::before { content:'#'; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(2)::before { content:'Hạng mục'; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(3)::before { content:'Đơn vị'; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(4)::before { content:'SL'; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(5)::before { content:'Thành tiền'; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(2) { flex-direction:column; align-items:flex-start; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(2) .desc { margin-top:3px; font-size:10px; line-height:1.5; }
+    .pricing-table tbody tr:not(.cat-row) td:nth-child(5) { color:#0f2460; font-weight:700; }
+    .pricing-table .cat-row td {
+      display:block;
+      border-radius:8px;
+      border:none;
+      background:#e8eeff;
+      margin:6px 0 2px;
+      padding:8px 10px;
+      font-size:11px;
+    }
+    .pricing-table tfoot,
+    .pricing-table tfoot tr,
+    .pricing-table tfoot td { display:block; }
+    .pricing-table tfoot td {
+      padding:10px 12px;
+      text-align:left !important;
+      font-size:12px !important;
+      line-height:1.5;
+    }
+    .pricing-table tfoot td:last-child {
+      font-size:17px !important;
+      padding-top:0;
+    }
 
     .divider,
     .total-box { margin-left: 14px; margin-right: 14px; }
@@ -324,6 +376,7 @@
       <h2>Bảng chi tiết báo giá</h2>
       <span class="tag">Chi tiết theo từng hạng mục</span>
     </div>
+    <p class="table-hint"><i class="ti ti-arrows-left-right" style="margin-right:4px;"></i>Vuốt ngang để xem đầy đủ bảng trên màn hình nhỏ.</p>
     <div class="table-wrap">
     <table class="pricing-table">
       <thead>
